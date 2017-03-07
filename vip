@@ -1,0 +1,26 @@
+
+var site=window.location.host;
+var element;
+switch(site)
+{
+case "v.youku.com":
+  var element="player"
+  break;
+case "www.iqiyi.com":
+  var element="flashbox"
+  break;
+case "www.le.com":
+  var element="fla_box_con"
+  break;
+case "http://www.mgtv.com/":
+  var element="mgtv-player-wrap"
+  break;
+case "http://tv.sohu.com/":
+  var element="playerWrap"
+  break;      
+default:
+ 
+}
+var width = document.getElementById(element).offsetWidth;
+var height = document.getElementById(element).offsetHeight;
+document.getElementById(element).innerHTML="<iframe height="+height+" width="+width+" src='//api.47ks.com/webcloud/?v=http://"+window.location.hostname+window.location.pathname+"'>"
